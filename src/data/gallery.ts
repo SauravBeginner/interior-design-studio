@@ -31,7 +31,6 @@ export const galleryImages: GalleryImage[] = [
 
   { src: unsplash(img.officeOpenWood), category: "Commercial", caption: "Prestige Atrium Workspace" },
   { src: unsplash(img.officeDeskPlant), category: "Commercial", caption: "Prestige Atrium Workspace" },
-  { src: unsplash(img.officeArchedHall), category: "Commercial", caption: "The Reading Room" },
   { src: unsplash(img.officeLoungeWood), category: "Commercial", caption: "The Reading Room" },
   { src: unsplash(img.officeDeskCityView), category: "Commercial", caption: "Prestige Atrium Workspace" },
 ];
