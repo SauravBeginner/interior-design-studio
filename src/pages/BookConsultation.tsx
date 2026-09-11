@@ -73,6 +73,31 @@ export default function BookConsultation() {
         image={unsplash(img.heroBohoLiving, { w: 2000 })}
       />
 
+      <section className="container-editorial pt-16 md:pt-20">
+        <div className="grid grid-cols-1 items-center gap-10 rounded-2xl border border-border bg-card p-6 md:grid-cols-2 md:p-8">
+          <div className="overflow-hidden rounded-xl">
+            <img
+              src={unsplash(img.livingRoomSunroom, { w: 1000 })}
+              alt="A sunlit living room designed by Studio Linden"
+              className="aspect-[16/10] w-full object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.25em] text-terracotta">
+              What happens next
+            </p>
+            <h2 className="mt-4 font-display text-2xl font-semibold md:text-3xl">
+              A 45-minute conversation, no obligation.
+            </h2>
+            <ul className="mt-6 space-y-3 text-muted-foreground">
+              <li>We walk through your space, your budget and your timeline.</li>
+              <li>You get an honest view of what is realistic and what it costs.</li>
+              <li>If we are a fit, we send a scope and fixed fee within a week.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section className="container-editorial py-20 md:py-28">
         <div className="mx-auto max-w-2xl">
           {submitted ? (

@@ -25,6 +25,13 @@ export default function Contact() {
       <section className="container-editorial py-20 md:py-28">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-12">
           <div className="space-y-10 md:col-span-4">
+            <div className="overflow-hidden rounded-2xl">
+              <img
+                src={unsplash(img.officeDeskPlant, { w: 900 })}
+                alt="The Studio Linden office in Indiranagar"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
             <div className="flex gap-4">
               <MapPin className="mt-1 shrink-0 text-terracotta" size={20} />
               <div>

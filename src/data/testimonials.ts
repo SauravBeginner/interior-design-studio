@@ -1,7 +1,10 @@
+import { img, unsplash } from "./images";
+
 export interface Testimonial {
   quote: string;
   name: string;
   context: string;
+  avatar?: string;
 }
 
 export const testimonials: Testimonial[] = [
@@ -10,18 +13,21 @@ export const testimonials: Testimonial[] = [
       "Studio Linden gave us a home that feels considered in every corner, without ever feeling precious. Two years in, we still notice new details we love.",
     name: "Rohan & Divya Kapoor",
     context: "Whitefield Garden Residence",
+    avatar: unsplash(img.portraitManDarkSuit, { w: 120, q: 70 }),
   },
   {
     quote:
       "Meera has an incredible ability to listen to what you actually want, not what you think you're supposed to want. Our loft feels completely like us.",
     name: "Ananya Bhatt",
     context: "Indiranagar Parkview Loft",
+    avatar: unsplash(img.portraitWomanOrange, { w: 120, q: 70 }),
   },
   {
     quote:
       "We interviewed four design studios before choosing Linden. They were the only team that asked how our team actually works before showing us a single mood board.",
     name: "Karthik Subramaniam",
     context: "CEO, Prestige Atrium Workspace",
+    avatar: unsplash(img.portraitManGlasses, { w: 120, q: 70 }),
   },
   {
     quote:

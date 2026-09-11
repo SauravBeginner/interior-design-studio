@@ -82,7 +82,7 @@ export const projects: Project[] = [
     size: "12,000 sq. ft.",
     description:
       "A 120-seat technology office designed to feel nothing like a technology office — warm timber flooring, low partitions, and a material palette borrowed from hospitality design to support long, focused work days.",
-    cover: unsplash(img.officeOpenWood),
+    cover: unsplash(img.officeLoungeWood),
     gallery: [
       unsplash(img.officeOpenWood),
       unsplash(img.officeDeskPlant),
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     size: "3,600 sq. ft.",
     description:
       "A private wealth advisory office designed around a single material idea: a continuous plaster arch motif borrowed from the client's family home, softened with cane furniture and an entirely book-lined reception hall.",
-    cover: unsplash(img.officeArchedHall),
+    cover: unsplash(img.officeDeskPlant),
     gallery: [unsplash(img.officeArchedHall), unsplash(img.officeLoungeWood)],
     scope: ["Full Interior Design", "Space Planning", "Lighting Design"],
   },

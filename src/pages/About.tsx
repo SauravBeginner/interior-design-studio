@@ -1,13 +1,7 @@
 import PageHero from "../components/PageHero";
 import { img, unsplash } from "../data/images";
 import { team } from "../data/team";
-
-const stats = [
-  { value: "11", label: "Years in practice" },
-  { value: "84", label: "Projects completed" },
-  { value: "6", label: "Design awards" },
-  { value: "3", label: "Cities served" },
-];
+import { stats } from "../data/stats";
 
 export default function About() {
   return (
@@ -19,7 +13,7 @@ export default function About() {
       />
 
       {/* Story */}
-      <section className="container-editorial py-24 md:py-32">
+      <section className="container-editorial py-20 md:py-28">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-12">
           <div className="md:col-span-4">
             <p className="eyebrow mb-5">Our Story</p>
@@ -55,37 +49,53 @@ export default function About() {
       </section>
 
       {/* Philosophy */}
-      <section className="hairline bg-secondary/40 py-24 md:py-32">
+      <section className="hairline bg-secondary/40 py-20 md:py-28">
         <div className="container-editorial">
           <p className="eyebrow mb-5">Our Approach</p>
           <h2 className="mb-14 font-display text-3xl font-semibold md:text-4xl">
             Three ideas guide every project.
           </h2>
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-            <div>
-              <span className="font-display text-4xl font-semibold text-terracotta">01</span>
-              <h3 className="mt-4 font-display text-xl font-semibold">Restraint over decoration</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                We edit as much as we add. A room with fewer, better things
-                will always outlast one filled with trends.
-              </p>
-            </div>
-            <div>
-              <span className="font-display text-4xl font-semibold text-terracotta">02</span>
-              <h3 className="mt-4 font-display text-xl font-semibold">Function before finish</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                No material or layout decision is made until we understand
-                exactly how a space needs to work, day to day.
-              </p>
-            </div>
-            <div>
-              <span className="font-display text-4xl font-semibold text-terracotta">03</span>
-              <h3 className="mt-4 font-display text-xl font-semibold">Built to be lived in</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                Every scheme is tested against real life — pets, kids, guests,
-                long days — not just how it photographs on the day it's done.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {[
+              {
+                n: "01",
+                title: "Restraint over decoration",
+                body: "We edit as much as we add. A room with fewer, better things will always outlast one filled with trends.",
+                image: img.livingRoomSunroom,
+              },
+              {
+                n: "02",
+                title: "Function before finish",
+                body: "No material or layout decision is made until we understand exactly how a space needs to work, day to day.",
+                image: img.kitchenGreenCabinets,
+              },
+              {
+                n: "03",
+                title: "Built to be lived in",
+                body: "Every scheme is tested against real life — pets, kids, guests, long days — not just how it photographs on the day it's done.",
+                image: img.bedroomNightstand,
+              },
+            ].map((idea) => (
+              <div
+                key={idea.n}
+                className="overflow-hidden rounded-2xl border border-border bg-card"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={unsplash(idea.image, { w: 800 })}
+                    alt={idea.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="p-7">
+                  <span className="font-display text-4xl font-semibold text-terracotta">
+                    {idea.n}
+                  </span>
+                  <h3 className="mt-3 font-display text-xl font-semibold">{idea.title}</h3>
+                  <p className="mt-3 leading-relaxed text-muted-foreground">{idea.body}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -103,18 +113,24 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="container-editorial py-24 md:py-32">
+      <section className="container-editorial py-20 md:py-28">
         <p className="eyebrow mb-5">Leadership</p>
         <h2 className="mb-14 font-display text-3xl font-semibold md:text-4xl">The people behind the work.</h2>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
           {team.map((member) => (
-            <div key={member.name}>
-              <div className="aspect-[4/5] overflow-hidden">
-                <img src={member.photo} alt={member.name} className="h-full w-full object-cover" />
+            <div key={member.name} className="flex flex-col gap-6 sm:flex-row sm:items-start">
+              <div className="w-36 shrink-0 overflow-hidden rounded-2xl sm:w-44">
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="aspect-[3/4] w-full object-cover"
+                />
               </div>
-              <h3 className="mt-6 font-display text-xl font-semibold">{member.name}</h3>
+              <div>
+              <h3 className="font-display text-xl font-semibold">{member.name}</h3>
               <p className="mt-1 text-sm text-terracotta">{member.role}</p>
               <p className="mt-4 leading-relaxed text-muted-foreground">{member.bio}</p>
+              </div>
             </div>
           ))}
         </div>

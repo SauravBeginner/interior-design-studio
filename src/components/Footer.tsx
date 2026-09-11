@@ -22,8 +22,11 @@ export default function Footer() {
       <div className="container-editorial py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link to="/" className="font-display text-2xl font-semibold">
-              Studio Linden
+            <Link
+              to="/"
+              className="font-display text-base font-semibold uppercase tracking-[0.3em]"
+            >
+              Studio Linden<span className="text-terracotta">.</span>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
               A boutique interior design studio based in Bangalore, crafting

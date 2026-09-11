@@ -14,20 +14,34 @@ export default function Services() {
         eyebrow="What We Do"
         title="Design services for every stage of a space."
         description="From a single consultation to full-scale renovation management, our services scale to meet the size of your project."
-        image={unsplash(img.officeArchedHall, { w: 2000 })}
+        image={unsplash(img.livingRoomMirrors, { w: 2000 })}
       />
 
       <section className="container-editorial py-20 md:py-28">
-        <div className="grid grid-cols-1 gap-x-10 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
             const Icon = icons[service.icon];
             return (
-              <div key={service.title} className="hairline pt-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-terracotta/40 text-terracotta">
-                  <Icon size={20} />
+              <div
+                key={service.title}
+                className="group overflow-hidden rounded-2xl border border-border bg-card"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={unsplash(service.image, { w: 800 })}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
                 </div>
-                <h3 className="mt-6 font-display text-xl font-semibold">{service.title}</h3>
-                <p className="mt-3 leading-relaxed text-muted-foreground">{service.description}</p>
+                <div className="p-7">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-terracotta/10 text-terracotta">
+                    <Icon size={18} />
+                  </div>
+                  <h3 className="mt-5 font-display text-xl font-semibold">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             );
           })}

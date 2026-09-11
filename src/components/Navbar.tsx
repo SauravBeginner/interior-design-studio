@@ -12,7 +12,6 @@ const links = [
   { label: "Services", to: "/services" },
   { label: "Process", to: "/process" },
   { label: "Gallery", to: "/gallery" },
-  { label: "Testimonials", to: "/testimonials" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -35,15 +34,16 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled || open
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
-          : "bg-transparent border-b border-transparent"
+        "fixed inset-x-0 top-0 z-50 bg-background/95 backdrop-blur-md transition-all duration-300",
+        scrolled || open ? "border-b border-border shadow-sm" : "border-b border-transparent"
       )}
     >
       <div className="container-editorial flex h-20 items-center justify-between">
-        <Link to="/" className="font-display text-xl font-semibold tracking-tight">
-          Studio <span className="text-terracotta">Linden</span>
+        <Link
+          to="/"
+          className="font-display text-sm font-semibold uppercase tracking-[0.3em] sm:text-base"
+        >
+          Studio Linden<span className="text-terracotta">.</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">

@@ -19,8 +19,8 @@
   --destructive-foreground: 40 38% 97%;
   --border: 30 18% 86%;
   --input: 30 18% 86%;
-  --ring: 16 58% 45%;
-  --terracotta: 16 58% 47%;
+  --ring: 18 46% 38%;
+  --terracotta: 18 46% 38%;
   --radius: 0.375rem;
 }
 
@@ -41,8 +41,8 @@
   --destructive-foreground: 40 20% 95%;
   --border: 240 6% 20%;
   --input: 240 6% 20%;
-  --ring: 16 65% 58%;
-  --terracotta: 16 65% 58%;
+  --ring: 18 52% 56%;
+  --terracotta: 18 52% 56%;
   --radius: 0.375rem;
 }
 
